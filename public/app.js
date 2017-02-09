@@ -1,10 +1,10 @@
 var app = angular.module('app', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/main');    
+    $urlRouterProvider.otherwise('/main');
     $stateProvider 
         .state('main', {
-            url: '/main'
+            url: '/main',
         }) 
         .state('home', {
             url: '/home',
@@ -13,7 +13,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('page1', {
             url: '/page1',
             templateUrl: 'page1.html'            
-        })                
+        })
+        .state('location', {
+            url: '/location',
+            templateUrl: 'location.html'            
+        })
+        .state('gallery', {
+            url: '/gallery',
+            templateUrl: 'gallery.html'            
+        }) 
 });
 
 app.controller('myCtrl', function($scope) {
