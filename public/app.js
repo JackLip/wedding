@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', ['ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/main');
@@ -8,7 +8,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         }) 
         .state('home', {
             url: '/home',
-            templateUrl: 'home.html'
+            templateUrl: '/loading-animation/load.html'
         })       
         .state('page1', {
             url: '/page1',
